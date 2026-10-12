@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes';
 import farmRoutes from './routes/farmRoutes';
 import shedRoutes from './routes/shedRoutes';
+import incubatorRoutes from './routes/incubatorRoutes';
+import incubationBatchRoutes from './routes/incubationBatchRoutes';
 
 dotenv.config();
 
@@ -18,6 +20,8 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/farms', farmRoutes);
 app.use('/api/sheds', shedRoutes);
+app.use('/api/incubators', incubatorRoutes);
+app.use('/api/incubation-batches', incubationBatchRoutes);
 
 // Health check route
 app.get('/health', (req, res) => {

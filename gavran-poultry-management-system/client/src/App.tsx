@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Batches from './pages/Batches';
 import Eggs from './pages/Eggs';
 import Incubators from './pages/Incubators';
+import IncubationBatches from './pages/IncubationBatches';
 import Health from './pages/Health';
 import Settings from './pages/Settings';
 import Farms from './pages/Farms';
@@ -58,6 +59,16 @@ function App() {
                 <ProtectedRoute>
                   <Layout>
                     <Incubators />
+                  </Layout>
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/incubation-batches" 
+              element={
+                <ProtectedRoute>
+                  <Layout>
+                    <IncubationBatches />
                   </Layout>
                 </ProtectedRoute>
               } 
